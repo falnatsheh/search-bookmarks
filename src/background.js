@@ -61,7 +61,7 @@ chrome.omnibox.onInputEntered.addListener(function(text){
     if (text.match(/(^|\s)https?:\/\//i)) {
       var url = text;
     } else {
-      var url = "chrome://bookmarks/#q=" + text;
+      var url = "chrome://bookmarks/?q=" + text;
     }
     chrome.tabs.update(tab.id, {url: url, selected: true});
   });
